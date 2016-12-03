@@ -1,23 +1,39 @@
 ---
 - name: OSX Local Provisioner
   hosts: local
+  vars_prompt:
+    - name: "appstore_id"
+      prompt: "Input apple id: "
+      private: no
+      when: appstore_id == null
+    - name: "appstore_password"
+      prompt: "Input password: "
+      private: yes
+      when: appstore_password == null
   sudo: no
   pre_tasks:
     - stat: path=~/.ssh
-      register: ssh 
+      register: ssh
+    - name: git clone dotfiles
+      git:
+        repo: git@github.com:makotow/dotfiles.git
+        dest: ~/dotfiles
+        version: master
   roles:
     # App Installations
     - brew
-    - defaults
+    # TODO?: check parameters
+    # - defaults
     - mas
-    - brew-cask
 
     # Configurations
+    - xcode
     - git
     - vim
-    - xcode
     - zsh
-    - {
-      role: ssh,
-      when: not ssh.stat.exists
-    }
+    - emacs
+    - tmux
+    - peco
+    - { role: ssh, when: not ssh.stat.exists }
+  post_tasks:
+    - shell: echo 'finish'

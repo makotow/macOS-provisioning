@@ -1,0 +1,6 @@
+- name: create symlink .peco
+  file:
+    src: ~/dotfiles/peco
+    dest: ~/.peco
+    state: link
+    force: yes

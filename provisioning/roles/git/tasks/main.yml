@@ -1,5 +1,10 @@
-- name: deploy gitconfig
-  template: src=gitconfig.j2 dest=~/.gitconfig force=True
-
-- name: deploy gitglobal ignore
-  template: src=gitignore_global.j2 dest=~/.gitignore_global force=True
+- name: Create symlink  gitconfig/gitignore/tigrc
+  file:
+    src: ~/dotfiles/git/{{ item }}
+    dest: ~/{{ item }}
+    state: link
+    force: yes
+  with_items:
+    - .gitignore
+    - .gitignore_global
+    - .tigrc

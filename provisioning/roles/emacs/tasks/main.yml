@@ -1,0 +1,13 @@
+- name: ownload spacemacs
+  git:
+    repo: https://github.com/syl20bnr/spacemacs.git
+    dest: ~/.emacs.d
+
+- name: create symlink .spacemacs
+  file:
+    src: ~/dotfiles/emacs/{{ item }}
+    dest: ~/{{ item }}
+    state: link
+    force: yes
+  with_items:
+    - .spacemacs

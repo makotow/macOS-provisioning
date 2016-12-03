@@ -1,47 +1,86 @@
-homebrew_repositories: []
+homebrew_repositories:
+  - neovim/neovim
+  - peco/peco
+  - simeji/jid
 
 homebrew_packages:
-  - ag
-  - autojump
+  - ansible
+  - awscli
+  - bash
+  - colordiff
+  - coreutils
+  - cowsay
+  - direnv
+  - elixir
+  -  { name: emacs, install_options: --with-cocoa }
+  - erlang
+  - gcc
+  - git
+  - go
+  - htop
+  - jid
+  - jq
+  - less
+  - lv
   - macvim
+  - markdown
+  - mas
+  - mongodb
+  - mysql
+  - neovim
+  - nginx
+  - nkf
   - node
+  - nvm
+  - openssl
+  - openssl@1.1
+  - p7zip
+  - pandoc
   - peco
+  - perl-build
+  - plenv
+  - postgresql
+  - pyenv
+  - python3
+  - rbenv
+  - rclone
+  - readline
+  - reattach-to-user-namespace
+  - ruby-build
+  - rust
+  - s3cmd
+  - scala
+  - source-highlight
+  - sphinx-doc
+  - sqlite
   - tig
   - tmux
   - tree
+  - unrar
+  - unzip
   - vim
+  - watch
+  - wget
+  - xz
+  - z
+  - zplug
   - zsh
   - zsh-completions
-  - zsh-syntax-highlighting
-  - go
-  - mas
-
-homebrew_cask_packages:
-  - 1password
-  - alfred
-  - bettertouchtool
-  - caffeine
-  - dash
-  - dropbox
-  - gas-mask
-  - google-chrome
-  - google-japanese-ime
-  - intellij-idea
-  - iterm2
-  - karabiner
-  - kindle
-  - music-manager
-  - sequel-pro
-  - skitch
-  - skype
-  - slack
-  - vagrant
-  - virtualbox
 
 mas_applications:
+  - {name: 'Reeder', store_hash: 880001334}
+  - {name: 'CopyLess', store_hash: 416439303}
+  - {name: 'LanScan', store_hash: 472226235}
+  - {name: 'Tweetbot', store_hash: 557168941}
+  - {name: 'Pushbullet', store_hash: 948415170}
+  - {name: 'StuffIt Expander', store_hash: 405580712}
+  - {name: 'The Unarchiver', store_hash: 425424353}
+  - {name: 'Wallcat', store_hash: 1000397973}
+  - {name: 'PopClip', store_hash: 445189367}
+  - {name: 'ForkLift', store_hash: 412448059}
+  - {name: 'OneDrive', store_hash: 823766827}
   - {name: 'Slack', store_hash: 803453959}
-  - {name: 'CCMenu', store_hash: 603117688}
-  - {name: 'Apple Configurator 2', store_hash: 1037126344}
+  - {name: 'WinArchiver Lite', store_hash: 414855915}
+  - {name: '1Password', store_hash: 443987910}
 
-    
 # vim:ft=ansible:
