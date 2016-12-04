@@ -23,6 +23,7 @@
 - name: append shells
   shell: >
     echo {{which_zsh.stdout}} >> /etc/shells
+  become: true
   when: grep_shells.rc != 0
 
 - name: notify please input password

@@ -1,4 +1,9 @@
 homebrew_repositories:
+  - homebrew/binary
+  - homebrew/dupes
+  - homebrew/gui
+  - homebrew/science
+  - homebrew/services
   - neovim/neovim
   - peco/peco
   - simeji/jid
@@ -12,7 +17,7 @@ homebrew_packages:
   - cowsay
   - direnv
   - elixir
-  -  { name: emacs, install_options: --with-cocoa }
+  - { name: emacs, install_option: '--with-cocoa' }
   - erlang
   - gcc
   - git
@@ -33,7 +38,6 @@ homebrew_packages:
   - node
   - nvm
   - openssl
-  - openssl@1.1
   - p7zip
   - pandoc
   - peco
@@ -49,7 +53,6 @@ homebrew_packages:
   - ruby-build
   - rust
   - s3cmd
-  - scala
   - source-highlight
   - sphinx-doc
   - sqlite
@@ -57,7 +60,6 @@ homebrew_packages:
   - tmux
   - tree
   - unrar
-  - unzip
   - vim
   - watch
   - wget

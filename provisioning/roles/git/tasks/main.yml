@@ -5,6 +5,6 @@
     state: link
     force: yes
   with_items:
-    - .gitignore
+    - .gitconfig
     - .gitignore_global
     - .tigrc
