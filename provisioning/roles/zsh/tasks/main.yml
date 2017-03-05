@@ -5,7 +5,7 @@
   register: which_zsh
   ignore_errors: True
 
-- debug: msg="{{which_zsh.stdout}}"
+- debug: msg="{{which_zsh.stdout_lines}}"
 
 #
 # login shell settings, you will be ased user's password when system switches to zsh.

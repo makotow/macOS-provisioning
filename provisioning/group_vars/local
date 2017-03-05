@@ -5,10 +5,10 @@ homebrew_repositories:
   - homebrew/science
   - homebrew/services
   - neovim/neovim
-  - peco/peco
   - simeji/jid
 
 homebrew_packages:
+  - ack
   - ansible
   - awscli
   - bash
@@ -16,6 +16,7 @@ homebrew_packages:
   - coreutils
   - cowsay
   - direnv
+  - doxygen
   - elixir
   - { name: emacs, install_option: '--with-cocoa' }
   - erlang

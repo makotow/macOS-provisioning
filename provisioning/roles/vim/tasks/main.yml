@@ -7,3 +7,12 @@
   with_items:
     - .vimrc
     - .vim
+
+- name: create symlink for nvim
+  file: 
+    src: ~/dotfiles/vim/{{ item.src }}  
+    dest: ~/.config/{{ item.dest }}
+    state: link
+    force: yes
+  with_items:
+    - { src: '.vim', dest: 'nvim'}
