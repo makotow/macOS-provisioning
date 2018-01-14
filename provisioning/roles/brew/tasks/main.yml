@@ -34,3 +34,11 @@
     install_options={{ item.install_option | default('') }}
   with_items: "{{ homebrew_packages }}"
   when: homebrew_packages
+
+- name: install and upgrade homebrew cask packages
+  homebrew_cask:
+    name={{ item.name | default(item }}
+    state={{ item.state | default('latest') }}
+    install_options={{ item.install_option | default('') }}
+  with_items: "{{ homebrew_cask_packages }}"
+  when: homebrew_cask_packages

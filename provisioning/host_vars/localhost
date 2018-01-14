@@ -1,4 +1,2 @@
 appstore_id: APPLE_ID 
 appstore_password: APPSTORE_PASSWORD
-
-# vim:ft=ansible:

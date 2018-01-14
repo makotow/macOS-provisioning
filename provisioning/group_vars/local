@@ -1,89 +1,215 @@
 homebrew_repositories:
+  - caskroom/cask
+  - chainsawbaby/formula
+  - greymd/tools
   - homebrew/binary
+  - homebrew/core
   - homebrew/dupes
   - homebrew/gui
   - homebrew/science
   - homebrew/services
+  - knqyf263/pet
+  - leopard-gecko/game
   - neovim/neovim
+  - sanemat/font
   - simeji/jid
 
 homebrew_packages:
-  - ack
+  - adns
   - ansible
+  - asdf
+  - asio
+  - aspcud
+  - augeas
+  - autoconf
+  - automake
+  - aws-shell
   - awscli
   - bash
+  - bash-snippets
+  - boost
+  - cairo
+  - clasp
+  - clingo
+  - cmake
   - colordiff
   - coreutils
   - cowsay
+  - cscope
+  - ctags
+  - dbus
   - direnv
-  - doxygen
-  - elixir
-  - { name: emacs, install_option: '--with-cocoa' }
-  - erlang
+  - docker-completion
+  - docker-machine
+  - { name: emacs, install_option: '--with-cocoa', '--with-ctags', '--with-librsvg', '--with-gnutls', '--with-dbus'}
+  - fish
+  - fontconfig
+  - fontforge
+  - freetype
+  - fzf
   - gcc
+  - gdbm
+  - gdk-pixbuf
+  - gettext
+  - gflags
   - git
+  - glib
+  - glide
+  - glog
+  - gmp
+  - gnu-sed
+  - gnupg
+  - gnutls
   - go
+  - gobject-introspection
+  - graphite2
+  - gringo
+  - harfbuzz
   - htop
+  - hub
+  - hugo
+  - icu4c
+  - imagemagick
+  - isl
+  - jemalloc
   - jid
+  - jo
+  - jpeg
   - jq
+  - jsoncpp
+  - kubectx
+  - kubernetes-cli
+  - kubernetes-helm
   - less
+  - libarchive
+  - libassuan
+  - libcroco
+  - libev
+  - libevent
+  - libffi
+  - libgcrypt
+  - libgpg-error
+  - libidn2
+  - libksba
+  - libmagic
+  - libmpc
+  - libpng
+  - librdkafka
+  - librsvg
+  - libssh2
+  - libtasn1
+  - libtermkey
+  - libtiff
+  - libtool
+  - libunistring
+  - libusb
+  - libuv
+  - libvterm
+  - libyaml
+  - lldpd
+  - luajit
   - lv
+  - lz4
+  - lzlib
   - macvim
   - markdown
   - mas
   - mongodb
+  - mpfr
+  - msgpack
   - mysql
   - neovim
-  - nginx
+  - nettle
   - nkf
-  - node
-  - nvm
+  - npth
+  - oniguruma
   - openssl
+  - osquery
+  - p11-kit
   - p7zip
+  - packer
   - pandoc
+  - pango
+  - pcre
+  - pcre2
   - peco
-  - perl-build
-  - plenv
+  - perl
+  - pinentry
+  - pixman
+  - pkg-config
   - postgresql
-  - pyenv
+  - prometheus
+  - python
   - python3
-  - rbenv
+  - rancher-cli
+  - rancher-compose
+  - rapidjson
   - rclone
   - readline
   - reattach-to-user-namespace
-  - ruby-build
-  - rust
+  - rocksdb
+  - ruby
+  - rustup-init
   - s3cmd
+  - scons
+  - shared-mime-info
+  - shellcheck
+  - sleuthkit
+  - snappy
   - source-highlight
   - sphinx-doc
   - sqlite
+  - stern
+  - sysdig
+  - terraform
+  - texinfo
+  - thrift
   - tig
   - tmux
+  - tmux-xpanes
   - tree
+  - ttygif
+  - ttyrec
+  - unibilium
+  - unixodbc
   - unrar
+  - vagrant-completion
+  - vault
   - vim
   - watch
   - wget
+  - wxmac
   - xz
+  - yara
   - z
   - zplug
   - zsh
   - zsh-completions
+  - zstd
+
+homebrew_cask_packages:
+  - docker
+  - minikube
+  - minishift
+  - sourcetree
 
 mas_applications:
-  - {name: 'Reeder', store_hash: 880001334}
-  - {name: 'CopyLess', store_hash: 416439303}
-  - {name: 'LanScan', store_hash: 472226235}
+  - {name: 'LINE', store_hash: 539883307}
+  - {name: 'WinArchiver', store_hash: 414855915}
+  - {name: 'OneDrive', store_hash: 823766827}
+  - {name: 'Magnet', store_hash: 441258766}
+  - {name: 'Skitch', store_hash: 425955336}
+  - {name: '1Password', store_hash: 443987910}
   - {name: 'Tweetbot', store_hash: 557168941}
+  - {name: 'Reeder', store_hash: 880001334}
+  - {name: 'StuffIt', store_hash: 405580712}
+  - {name: 'LanScan', store_hash: 472226235}
+  - {name: 'Microsoft Remote Desktop', store_hash: 715768417}
   - {name: 'Pushbullet', store_hash: 948415170}
-  - {name: 'StuffIt Expander', store_hash: 405580712}
-  - {name: 'The Unarchiver', store_hash: 425424353}
+  - {name: 'Slack', store_hash: 803453959}
+  - {name: 'ForkLift', store_hash: 412448059}
+  - {name: 'Spark', store_hash: 1176895641}
   - {name: 'Wallcat', store_hash: 1000397973}
   - {name: 'PopClip', store_hash: 445189367}
-  - {name: 'ForkLift', store_hash: 412448059}
-  - {name: 'OneDrive', store_hash: 823766827}
-  - {name: 'Slack', store_hash: 803453959}
-  - {name: 'WinArchiver Lite', store_hash: 414855915}
-  - {name: '1Password', store_hash: 443987910}
-
-# vim:ft=ansible:
+  - {name: 'PDFGenius', store_hash: 522090209}
+  - {name: 'Producteev', store_hash: 450283360}

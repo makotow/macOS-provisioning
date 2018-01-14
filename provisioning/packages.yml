@@ -1,0 +1,11 @@
+---
+- name: OSX Local Provisioner
+  hosts: local
+  pre_tasks:
+    - stat: path=~/.ssh
+      register: ssh
+  roles:
+    - brew
+  post_tasks:
+    - shell: echo 'finish'
+  tags: packages

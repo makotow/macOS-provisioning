@@ -1,0 +1,23 @@
+---
+- name: OSX Local Provisioner for packages
+  hosts: local
+  pre_tasks:
+    - stat: path=~/.ssh
+      register: ssh
+    - name: git clone dotfiles
+      git:
+        repo: git@github.com:makotow/dotfiles.git
+        dest: ~/dotfiles
+        version: master
+  roles:
+    - xcode
+    - git
+    - vim
+    - fish
+    - emacs
+    - tmux
+    - peco
+    - { role: ssh, when: not ssh.stat.exists }
+  post_tasks:
+    - shell: echo 'configuration playbook done.'
+  tags: configuration

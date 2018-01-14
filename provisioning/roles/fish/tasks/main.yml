@@ -1,0 +1,48 @@
+---
+- name: search path fish
+  command: >
+    which fish
+  register: which_fish
+  ignore_errors: True
+
+- debug: msg="{{which_fish.stdout_lines}}"
+
+#
+# login shell settings, you will be ased user's password when system switches to fish.
+#
+
+- name: grep shells
+  shell: >
+    cat /etc/shells | grep "{{which_fish.stdout}}"
+  register: grep_shells
+  ignore_errors: True
+
+- debug: msg="{{grep_shells}}"
+  when: grep_shells.rc == 0
+
+- name: append shells
+  shell: >
+    echo {{which_fish.stdout}} >> /etc/shells
+  become: true
+  when: grep_shells.rc != 0
+
+- name: notify please input password
+  shell: >
+    osascript -e 'display notification "Prease input password in terminal" with title "osx-provisioning"'
+
+- name: change login shell
+  shell: >
+    chpass -s {{which_fish.stdout}}
+  register: result
+  until: result.rc == 0
+  retries: 3
+
+- stat: path=~/.config/fish
+  register: fishdir
+
+- name: create fish directory
+  file: name=~/.config/fish state=directory
+  when: not config.stat.exists
+
+- name: create symlink
+  file: src=~/dotfiles/fish/config.fish dest=~/.config/fish/config.fish state=link
