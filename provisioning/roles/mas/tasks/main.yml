@@ -1,11 +1,11 @@
 ---
-- name: signout mas
-  shell: >
-    mas signout
-
-- name: signin to mas
-  shell: >
-    mas signin {{appstore_id}} "{{appstore_password}}"
+#- name: signout mas
+#  shell: >
+#    mas signout
+#
+#- name: signin to mas
+#  shell: >
+#    mas signin {{appstore_id}} "{{appstore_password}}"
 
 - name: install applications
   shell: >

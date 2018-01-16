@@ -26,9 +26,9 @@
   become: true
   when: grep_shells.rc != 0
 
-- name: notify please input password
-  shell: >
-    osascript -e 'display notification "Prease input password in terminal" with title "osx-provisioning"'
+#- name: notify please input password
+#  shell: >
+#    osascript -e 'display notification "Please input password in terminal" with title "osx-provisioning"'
 
 - name: change login shell
   shell: >
