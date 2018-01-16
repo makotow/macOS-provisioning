@@ -1,15 +1,16 @@
 ---
 - name: OSX Local Provisioner
   hosts: local
-  vars_prompt:
-    - name: "appstore_id"
-      prompt: "Input apple id "
-      private: no
-      when: appstore_id == null
-    - name: "appstore_password"
-      prompt: "Input password "
-      private: yes
-      when: appstore_password == null
+  # FIX: Disable in this release due to mas signin/signout does not work correctly.
+  # vars_prompt:
+  #   - name: "appstore_id"
+  #     prompt: "Input apple id "
+  #     private: no
+  #     when: appstore_id == null
+  #   - name: "appstore_password"
+  #     prompt: "Input password "
+  #     private: yes
+  #     when: appstore_password == null
   roles:
     - mas
   post_tasks:
