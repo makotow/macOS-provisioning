@@ -65,7 +65,6 @@ homebrew_packages:
   - graphite2
   - gringo
   - harfbuzz
-  - htop
   - hub
   - hugo
   - icu4c

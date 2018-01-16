@@ -42,7 +42,7 @@
 
 - name: create fish directory
   file: name=~/.config/fish state=directory
-  when: not config.stat.exists
+  when: not fishdir.stat.exists
 
 - name: create symlink
   file: src=~/dotfiles/fish/config.fish dest=~/.config/fish/config.fish state=link
